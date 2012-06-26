@@ -1,0 +1,75 @@
+.pointer {
+		display:block;
+		width: 20px;
+		height: 50px;
+		background: black;
+		position:absolute;
+		left: 15px;
+}
+.pointer:after {
+	content:"";
+	display: block;
+	position: absolute;
+	bottom: -20px;
+	width: 0;
+	height: 0;
+	border-width: 10px 10px 10px 10px;
+	border-style: solid;
+	border-color: black transparent transparent transparent;
+}
+
+.current_disc {
+	position: absolute;
+	z-index: 6;
+}
+.yellow_disc {
+	background: yellow;
+	z-index: 2;
+}
+.red_disc { 
+	background: red;
+	z-index: 2;
+}
+.empty_disc { 
+	background: white;
+	z-index: 2;
+}
+.empty_disc, .yellow_disc, .red_disc, .current_disc { 
+	width: 40px;
+	height: 40px;
+	-moz-border-radius: 20px; 
+	-webkit-border-radius: 20px; 
+	border-radius: 20px;
+}
+.spot {
+	width: 5px;
+	height: 5px;
+	background:black;
+	-webkit-border-radius: 20px; 
+	border-radius: 2px;
+}
+.disc_holder {
+	padding:5px;
+	width: 40px;
+	float:left;
+	z-index:10;
+	margin-left:1px;
+	margin-bottom: 1px;
+	background: blue;
+	
+}
+.clear { display:block;clear:both; }
+
+.message_box {
+	border: 1px solid #cdcdcd; 
+	background-color: #dedede;
+	color: #33;
+	padding: 5px;
+	text-align: center;
+	width: 100px;
+}
+.success {
+	border: 1px solid #4F8A10;
+	color: #4F8A10;
+	background-color: #DFF2BF;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+	 
+	<title>Connect 4!</title>
+  <style type="text/css">@import url("css/connect4.css");</style>	
+</head>
+
+<body>
+  <div class="pointer" style="display:none"></div>
+  <div class="current_disc" style="display:none"></div>
+	
+</body>
+<!-- Because everyone uses jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="js/connect4.system.js"></script>
+<script src="js/connect4.interface.js"></script>
+<script>
+	jQuery.fn.center = function () {
+		this.css("position","absolute");
+		this.css("top", (($(window).height() - this.outerHeight()) / 2) + $(window).scrollTop() + "px");
+		this.css("left", (($(window).width() - this.outerWidth()) / 2) + $(window).scrollLeft() + "px");
+		return this;
+	}
+	jQuery.fn.keepBottom = function () {
+		this.css("position","absolute");
+		
+		
+		this.css("left", (($(window).width() - this.outerWidth()) / 2) + $(window).scrollLeft() + "px");
+		this.css("top", ($(window).height() - this.outerHeight() - 10) + "px");
+		return this;
+	}
+
+</script>
+
+</html>
